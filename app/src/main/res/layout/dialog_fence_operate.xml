@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_fence_operate"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <LinearLayout style="@style/dialog_layout_style">
+
+        <include layout="@layout/dialog_top"></include>
+
+        <Button
+                android:id="@+id/btn_fenceOperate_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@mipmap/bg_btn_common"
+                android:text="@string/alarm_info"
+            android:visibility="gone"
+                android:textColor="@color/layout_title"
+                android:textSize="15dp"/>
+
+        <Button
+                android:id="@+id/btn_fenceOperate_update"
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:layout_marginBottom="10dp"
+                android:background="@mipmap/bg_btn_common"
+                android:text="@string/update_fence"
+            android:visibility="gone"
+                android:textColor="@color/layout_title"
+                android:textSize="15dp"/>
+
+        <Button
+                android:id="@+id/btn_fenceOperate_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:layout_marginBottom="10dp"
+                android:background="@mipmap/bg_btn_common"
+                android:text="@string/delete_fence"
+                android:textColor="@color/layout_title"
+                android:textSize="15dp"/>
+
+        <include layout="@layout/dialog_bottom"></include>
+
+    </LinearLayout>
+
+</LinearLayout>

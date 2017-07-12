@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">百度鹰眼</string>
+    <string name="app_title">百度鹰眼Android SDK</string>
+
+    <string name="all_cancel">取消</string>
+    <string name="all_sure">确定</string>
+    <string name="all_fence_operate">围栏操作</string>
+
+    <string name="base_title">BaseActivity</string>
+    <string name="login_title">LoginActivity</string>
+
+    <string name="fence_title">地理围栏</string>
+    <string name="alarm_title">围栏报警</string>
+    <string name="bos_title">图片服务</string>
+
+    <string name="fence_desc">本地、云端围栏双重监控</string>
+    <string name="bos_desc">上传、下载图片，生成水印图片</string>
+
+    <string name="gather_interval_hint">5</string>
+    <string name="pack_interval_hint">30</string>
+
+    <string name="fence_setting_title">围栏设置</string>
+    <string name="fence_create_local_circle">创建本地圆形围栏</string>
+    <string name="fence_create_server_circle">创建服务端圆形围栏</string>
+    <string name="fence_create_polyline">创建多段线围栏</string>
+    <string name="fence_create_polygon">创建多边形围栏</string>
+
+    <!-- 围栏设置子选项 -->
+    <string name="fence_type">围栏类型</string>
+    <string name="fence_shape">围栏形状</string>
+    <string name="fence_name">围栏名称</string>
+    <string name="vertexes_number">顶点数</string>
+
+    <!-- 围栏类型子选项 -->
+    <string name="local_fence">本地(蓝色围栏)</string>
+    <string name="server_fence">服务端(红色围栏)</string>
+
+    <!-- 围栏操作子选项-->
+    <string name="create_fence">创建</string>
+    <string name="fence_list">查询</string>
+    <string name="alarm_info">历史报警信息</string>
+    <string name="update_fence">更新</string>
+    <string name="delete_fence">删除</string>
+
+    <!-- 围栏形状子选项 -->
+    <string name="circle_fence">圆形</string>
+    <string name="polygon_fence">多边形</string>
+    <string name="polyline_fence">多段线</string>
+
+    <!-- 创建围栏子选项 -->
+    <string name="fence_denoise">去噪参数（单位：米）</string>
+    <string name="fence_radius">半径（单位：米）</string>
+    <string name="fence_offset">偏离距离（单位：米）</string>
+    <string name="alarm_condition">围栏报警条件</string>
+
+    <!-- 创建围栏子选项默认值 -->
+    <string name="denoise_hint">30</string>
+    <string name="fence_radius_hint">100</string>
+    <string name="offset_hint">200</string>
+    <string name="vertexes_number_hint">3</string>
+    <string name="fence_name_hint">myFence</string>
+
+    <!-- 创建围栏提示信息 -->
+    <string name="fence_create_caption">
+        1、创建圆形围栏时，请点击地图相应位置作为围栏圆心；\n2、创建多边形或多段线围栏时，请按照设定的顶点数，依次点击地图作为每段折线的起点；\n3、本地围栏暂只支持圆形围栏
+    </string>
+
+    <!-- 查询围栏提示信息-->
+    <string name="fence_operate_caption">圆形围栏只显示中心图标，
+        \n 多边形、多段线围栏只显示起点图标。
+        \n 请点击图标进行围栏操作!
+    </string>
+
+    <!-- 报警通知标题 -->
+    <string name="alarm_push_title">百度鹰眼报警推送</string>
+
+    <!-- 对象（图片）操作提示信息-->
+    <string name="not_granted_album_permission">未获取到读取相册的权限</string>
+    <string name="open_album_failed">打开相册失败</string>
+    <string name="not_select_picture">未获取到图片</string>
+    <string name="save_picture">图片下载成功,正在保存...</string>
+
+    <string name="loc_failed">定位失败</string>
+    <string name="font_type">微软雅黑</string>
+
+    <string name="start_trace">开启服务</string>
+    <string name="stop_trace">停止服务</string>
+    <string name="start_gather">开启采集</string>
+    <string name="stop_gather">停止采集</string>
+
+
+</resources>

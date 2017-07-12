@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <View style="@style/dialog_split_line_style"/>
+
+    <Button
+            android:id="@+id/btn_all_cancel"
+            android:layout_width="match_parent"
+            android:paddingTop="5dp"
+            android:layout_height="wrap_content"
+            android:background="@color/cancel_bg"
+            android:text="@string/all_cancel"
+            android:textColor="@color/dialog_title"
+            android:textSize="15dp"/>
+
+</LinearLayout>
