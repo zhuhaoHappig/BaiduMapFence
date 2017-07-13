@@ -38,7 +38,7 @@ public class FenceCreateDialog extends Dialog implements View.OnClickListener {
     private FenceType fenceType = FenceType.local;
     private FenceShape fenceShape = FenceShape.circle;
 
-    private double radius = 1000;
+    private double radius = 100;
     private int denoise = 0;
     private int offset = 200;
 
@@ -76,6 +76,7 @@ public class FenceCreateDialog extends Dialog implements View.OnClickListener {
                 } else {
                     titleText.setText(R.string.fence_create_server_circle);
                 }
+                fenceRadiusLayout.setVisibility(View.VISIBLE);
                 fenceOffsetLayout.setVisibility(View.GONE);
                 break;
 
@@ -87,6 +88,7 @@ public class FenceCreateDialog extends Dialog implements View.OnClickListener {
 
             case polyline:
                 titleText.setText(R.string.fence_create_polyline);
+                fenceOffsetLayout.setVisibility(View.VISIBLE);
                 fenceRadiusLayout.setVisibility(View.GONE);
                 break;
 

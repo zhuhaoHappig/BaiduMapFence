@@ -534,6 +534,8 @@ public class CreateFenceActivity extends BaseActivity implements View.OnClickLis
 
                 viewUtil.showToast(CreateFenceActivity.this, getString(R.string.fence_operate_caption));
 
+                clearOverlay();
+
                 FenceType fenceType = response.getFenceType();
 
                 List<FenceInfo> fenceInfos = response.getFenceInfos();
