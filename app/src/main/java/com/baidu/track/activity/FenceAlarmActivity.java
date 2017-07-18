@@ -19,6 +19,7 @@ import android.provider.Settings;
 import android.support.v4.content.res.ResourcesCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.CircleOptions;
@@ -164,6 +165,7 @@ public class FenceAlarmActivity extends BaseActivity implements View.OnClickList
     private Marker currentMarkerA;
     private Overlay currentOverlay;
 
+    private boolean firstLocate = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -316,6 +318,12 @@ public class FenceAlarmActivity extends BaseActivity implements View.OnClickList
                         return;
                     }
 
+                    if(firstLocate){
+                        firstLocate = false;
+                        Toast.makeText(FenceAlarmActivity.this,"起点获取中，请稍后...",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
                     //当前经纬度
                     CurrentLocation.locTime = point.getLocTime();
                     CurrentLocation.latitude = currentLatLng.latitude;
@@ -403,6 +411,7 @@ public class FenceAlarmActivity extends BaseActivity implements View.OnClickList
                     setTraceBtnStyle();
                     setGatherBtnStyle();
                     unregisterPowerReceiver();
+                    firstLocate = true;
                 }
                 viewUtil.showToast(FenceAlarmActivity.this,
                         String.format("onStopTraceCallback, errorNo:%d, message:%s ", errorNo, message));
@@ -430,7 +439,7 @@ public class FenceAlarmActivity extends BaseActivity implements View.OnClickList
                         if (trackPoints.size() >= 1) {
                             mapUtil.drawEndPoint(trackPoints.get(trackPoints.size() - 1));
                         }
-
+                        firstLocate = true;
                         stopRealTimeLoc();
                         startRealTimeLoc(Constants.LOC_INTERVAL);
 
@@ -783,7 +792,6 @@ public class FenceAlarmActivity extends BaseActivity implements View.OnClickList
         mClient.clear();//释放资源
 
         mapUtil.clear();//清除地图所有图层释放资源
-
 
     }
 
