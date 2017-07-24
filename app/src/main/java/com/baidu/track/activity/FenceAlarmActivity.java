@@ -679,6 +679,7 @@ public class FenceAlarmActivity extends BaseActivity implements View.OnClickList
         if (null != realTimeHandler && null != realTimeLocRunnable) {
             realTimeHandler.removeCallbacks(realTimeLocRunnable);
         }
+        mClient.stopRealTimeLoc();
     }
 
     static class RealTimeHandler extends Handler {
